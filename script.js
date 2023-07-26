@@ -81,8 +81,8 @@ const pigGameF = function () {
   } else {
     currSum = 0;
     document.querySelector(`#current--${turn}`).textContent = 0;
-    turnChange();
     activeF();
+    turnChange();
   }
 };
 
