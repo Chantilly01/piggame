@@ -6,7 +6,7 @@ let playerTwoScore = 0;
 let currSum = 0;
 let dice = 0;
 
-const goalSum = 25;
+const goalSum = 100;
 const newGame = document.querySelector('.btn--new');
 const rollDice = document.querySelector('.btn--roll');
 const hold = document.querySelector('.btn--hold');
@@ -106,6 +106,10 @@ rollDice.addEventListener('click', function () {
   }
 });
 hold.addEventListener('click', function () {
-  activeF();
-  holdFun();
+  if (playerOneScore <= goalSum) {
+    if (playerTwoScore <= goalSum) {
+      activeF();
+      holdFun();
+    }
+  }
 });
